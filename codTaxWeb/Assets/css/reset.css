@@ -1,0 +1,32 @@
+﻿@charset "UTF-8";
+
+/* reset */
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, img { margin: 0; padding: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+html { width: 100%; min-height: 100%; font-size: 14px; }
+body, code { font-family: 'Monospace', Helvetica, Arial,sans-serif; word-break: break-all; word-wrap: break-word; -webkit-hyphens: none; hyphens: none; color: #333; background: #fff; -webkit-text-size-adjust: none; }
+/*body,code {font-family:'Noto Sans KR', Helvetica,Arial,sans-serif; word-break:break-all; word-wrap:break-word; -webkit-hyphens:none; hyphens:none; color:#333; background:#fff; -webkit-text-size-adjust:none;}*/
+ul, ol, dl, li { list-style: none; }
+img, fieldset { border: 0; max-width: 100%; vertical-align: top; }
+i, em, address { font-style: normal; }
+table { table-layout: fixed; width: 100%; border: 0; border-spacing: 0; border-collapse: collapse; }
+table img { vertical-align: middle; }
+th, td { border: 0; word-wrap: break-word; }
+input, select, textarea { font-family: 'Noto Sans KR', Helvetica, Arial, sans-serif; font-size: 14px; color: #4c4c4f; vertical-align: middle; /*-webkit-appearance:none; */ -webkit-border-radius: 0; }
+label { cursor: pointer; }
+legend, caption, hr.layout { visibility: hidden; overflow: hidden; text-indent: -120%; white-space: nowrap; width: 0; height: 0; font-size: 0; line-height: 0; border: 0; }
+button { overflow: visible; padding: 0; margin: 0; border: 0; outline: 0; cursor: pointer; font-family: 'Noto Sans KR', Helvetica, Arial, sans-serif; background: transparent; }
+button::-moz-focus-inner { padding: 0; border: 0; }
+a { text-decoration: none; color: #777; }
+a:hover { color: #3C77EB; text-decoration: none; }
+a[href^="tel"]:hover { text-decoration: none; }
+
+/* html5 */
+object, del, sub, var { margin: 0; padding: 0; }
+article, aside, details, figcaption, figure, footer, header, main, hgroup, menu, nav, section { display: block; }
+
+/* skipNavigation */
+#skipNavigation a { position: absolute; left: 0; top: 0; display: block; overflow: hidden; margin-left: -1px; margin-bottom: -1px; width: 1px; height: 1px; text-align: center; color: #000; white-space: nowrap; }
+#skipNavigation a:focus, #skipNavigation a:hover, #skipNavigation a:active { z-index: 100; padding: 10px 0; width: 100%; height: auto; background: #c4122f; color: #fff; }
+
+/* blind */
+.blind { overflow: hidden; position: absolute; clip: rect(0 0 0 0); margin: -1px; width: 1px; height: 1px; color: transparent; }

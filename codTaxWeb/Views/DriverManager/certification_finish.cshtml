@@ -1,0 +1,51 @@
+﻿@model Models.Nice_Certification_Finish_Data
+
+@{
+    ViewBag.Title = "certification_finish";
+    Layout = "~/Views/Shared/_NoLayout.cshtml";
+}
+
+<div id="contents" class="contents">
+    <section class="section">
+        <div class="titleArea">
+            <h3>@Model.Msg</h3>
+        </div>
+        <div class="tableLayout">
+            <table>
+                <caption>caption</caption>
+                <colgroup>
+                    <col style="width:180px">
+                    <col style="width:auto">
+                    <col style="width:180px">
+                    <col style="width:auto">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">공인인증서 유효기간 </th>
+                        <td colspan="3"><input type="text" class="fText w200" readonly="readonly" id="expireDt" value="@Model.expireDt" /></td>
+                    </tr>                    
+                </tbody>
+            </table>
+        </div>
+
+        <div class="btnArea">
+            <a href="#" class="btnSubmit" id="btn_Submit">창 닫기</a>
+        </div>
+    </section>
+
+</div>
+
+<script>
+    //창닫기 클릭    
+    $("#btn_Submit").click(function () {
+        if ($.browser.msie) {
+            window.opener = 'Self';
+            window.open('', '_parent', '');
+            window.close();
+        } else {
+            window.close(); // 일반적인 현재 창 닫기 
+            window.open('about:blank', '_self').self.close();  // IE에서 묻지 않고 창 닫기 
+        } 
+    });
+</script>
+

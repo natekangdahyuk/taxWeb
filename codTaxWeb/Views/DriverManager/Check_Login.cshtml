@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Check_Login";
+    Layout = "~/Views/Shared/_NoLayout.cshtml";
+}
+
+<div id="wrap" class="wrap login">
+    <header id="header" class="header">
+        <h1><a href="#"><img src="/Assets/images/common/logo.png" alt="COD Labs Connect on Demand" /></a></h1>
+    </header>
+
+    <hr class="layout" />
+
+    <div id="container" class="container">
+        <div id="contents" class="contents">
+            <section class="section loginArea">
+                <h2>LOGIN</h2>
+                <fieldset>
+                    <ul>
+                        <li>
+                            <label for="userId" class="blind">전화번호</label><input type="text" value="" name="phone_no" id="phone_no" onchange="getOnlyNumber(this);" onkeyup="getOnlyNumber(this);" class="fText w100per" maxlength="11" placeholder="전화번호입력" />
+                        </li>
+                        <li>
+                            <label for="userPW" class="blind">생년월일</label><input type="password" value="" name="birth_day" id="birth_day" onchange="getOnlyNumber(this);" onkeyup="getOnlyNumber(this);" class="fText w100per" maxlength="6" placeholder="생년월일입력" />
+                        </li>
+                    </ul>                    
+                    <p class="txtWarn" style="display:none;" id="err_area"></p>
+                    <a href="#" class="btnLogin" id="btnLogin">로그인</a>
+                </fieldset>
+            </section>
+        </div>
+    </div>
+
+    <hr class="layout" />
+</div>
+
+<script src="~/Views/DriverManager/Check_Login.js?version=0.1"></script>

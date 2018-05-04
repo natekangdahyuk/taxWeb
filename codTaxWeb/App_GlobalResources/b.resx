@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="b8010" xml:space="preserve">
+    <value>작성일자가 발행일시 이후일 수 없습니다.</value>
+  </data>
+  <data name="b8020" xml:space="preserve">
+    <value>승인번호의 일자는 작성일자와 같아야 합니다.</value>
+  </data>
+  <data name="b8021" xml:space="preserve">
+    <value>승인번호의 국세청 등록번호를 확인 하시기 바랍니다. (41000040)</value>
+  </data>
+  <data name="b8022" xml:space="preserve">
+    <value>승인번호는 숫자와 영문 소문자로만 구성되어야 합니다.</value>
+  </data>
+  <data name="b8030" xml:space="preserve">
+    <value>세금계산서 종류는 01,02,03,04 중 하나여야 합니다.</value>
+  </data>
+  <data name="b8031" xml:space="preserve">
+    <value>세금계산서 분류는 01,02,03,05 중 하나여야 합니다.</value>
+  </data>
+  <data name="b8040" xml:space="preserve">
+    <value>공급자와 공급받는자의 사업자번호가 같을 수 없습니다.</value>
+  </data>
+  <data name="b8041" xml:space="preserve">
+    <value>공급자 사업자 번호를 검증합니다.</value>
+  </data>
+  <data name="b8042" xml:space="preserve">
+    <value>공급자 상호는 필수입니다.</value>
+  </data>
+  <data name="b8043" xml:space="preserve">
+    <value>공급자 대표자명은 필수입니다.</value>
+  </data>
+  <data name="b8050" xml:space="preserve">
+    <value>공급받는자가 사업자일 경우 사업자번호를 검증합니다.</value>
+  </data>
+  <data name="b8051" xml:space="preserve">
+    <value>공급받는자가 개인일 경우 주민번호를 검증합니다.</value>
+  </data>
+  <data name="b8052" xml:space="preserve">
+    <value>공급받는자의 사업자번호 문자수가 올바르지 않습니다.</value>
+  </data>
+  <data name="b8053" xml:space="preserve">
+    <value>공급받는자의 상호는 필수입니다.</value>
+  </data>
+  <data name="b8054" xml:space="preserve">
+    <value>공급받는자의 대표자명은 필수입니다.</value>
+  </data>
+  <data name="b8060" xml:space="preserve">
+    <value>위수탁인 경우 수탁자 사업자번호를 검증합니다.</value>
+  </data>
+  <data name="b8061" xml:space="preserve">
+    <value>위수탁인 경우 수탁자 상호는 필수입니다.</value>
+  </data>
+  <data name="b8062" xml:space="preserve">
+    <value>위수탁인 경우 수탁자 대표자명은 필수입니다.</value>
+  </data>
+  <data name="b8063" xml:space="preserve">
+    <value>위수탁이 아닌 경우 수탁자 사업자번호가 있어선 안됩니다.</value>
+  </data>
+  <data name="b8064" xml:space="preserve">
+    <value>위수탁이 아닌 경우 수탁자 상호가 있어선 안됩니다.</value>
+  </data>
+  <data name="b8065" xml:space="preserve">
+    <value>위수탁이 아닌 경우 수탁자 대표자명이 있어선 안됩니다.</value>
+  </data>
+  <data name="b8070" xml:space="preserve">
+    <value>영수/청구 구분코드는 01,02중 하나여야 합니다.</value>
+  </data>
+  <data name="b8080" xml:space="preserve">
+    <value>공급가는 0일 수 없습니다.</value>
+  </data>
+  <data name="b8081" xml:space="preserve">
+    <value>영세율이 아닐 경우 세액이 0일 수 없습니다.</value>
+  </data>
+  <data name="b8082" xml:space="preserve">
+    <value>수정계산서가 아닌 경우 공급가액이 음수가 될 수 없습니다.</value>
+  </data>
+  <data name="b8083" xml:space="preserve">
+    <value>수정계산서가 아닌 경우 세액이 0일 수 없습니다.</value>
+  </data>
+  <data name="b8084" xml:space="preserve">
+    <value>수정계산서가 아닌 경우 수정사유에 값이 없어야 합니다.</value>
+  </data>
+  <data name="b8090" xml:space="preserve">
+    <value>수정계산서일 경우 수정코드가 반드시 있어야 합니다.</value>
+  </data>
+  <data name="b8091" xml:space="preserve">
+    <value>수정계산서의 수정코드는 01,02,03,04,05,06중 하나여야 합니다.</value>
+  </data>
+  <data name="b8100" xml:space="preserve">
+    <value>품목의 일자는 YYYYMMDD 형식이어야 합니다.</value>
+  </data>
+  <data name="b8101" xml:space="preserve">
+    <value>품목 등록시에도 공급가액이 0일 수 없습니다.</value>
+  </data>
+  <data name="b8102" xml:space="preserve">
+    <value>계산서 공급가액과 품목의 공급가액의 합계가 일치해야 합니다.</value>
+  </data>
+  <data name="b8103" xml:space="preserve">
+    <value>계산서의 작성일자와 품목의 일자 중 하나 이상은 일치해야 합니다.</value>
+  </data>
+  <data name="b8104" xml:space="preserve">
+    <value>계산서의 작성일자보다 품목의 일자가 미래 날짜일수 없습니다.</value>
+  </data>
+  <data name="b8105" xml:space="preserve">
+    <value>계산서의 작성년월과 품목의 년월은 일치해야 합니다.</value>
+  </data>
+  <data name="b8106" xml:space="preserve">
+    <value>계산서의 합계금액과 현금,수표,어음,외상미수금의 합은 일치해야 합니다.</value>
+  </data>
+  <data name="b8107" xml:space="preserve">
+    <value>품목의 거래일자 중 하나는 작성일과 같아야합니다.</value>
+  </data>
+</root>

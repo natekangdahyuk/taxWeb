@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:intf="https://t-ws.nicedata.co.kr/services/DTIService" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:impl="https://t-ws.nicedata.co.kr/services/DTIService" targetNamespace="https://t-ws.nicedata.co.kr/services/DTIService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types />
+  <wsdl:message name="updateConfirmBillResponse">
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="recvConfirmResponse">
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="membJoinRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="linkId" type="xsd:string" />
+    <wsdl:part name="bizNo" type="xsd:string" />
+    <wsdl:part name="custName" type="xsd:string" />
+    <wsdl:part name="ownerName" type="xsd:string" />
+    <wsdl:part name="bizCond" type="xsd:string" />
+    <wsdl:part name="bizItem" type="xsd:string" />
+    <wsdl:part name="rsbmName" type="xsd:string" />
+    <wsdl:part name="email" type="xsd:string" />
+    <wsdl:part name="telNo" type="xsd:string" />
+    <wsdl:part name="hpNo" type="xsd:string" />
+    <wsdl:part name="zipCode" type="xsd:string" />
+    <wsdl:part name="addr1" type="xsd:string" />
+    <wsdl:part name="addr2" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="retryPeriodStatusNewBillResponse">
+    <wsdl:part name="retryPeriodStatusNewBillReturn" type="xsd:string" />
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="makeAndPublishSignRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+    <wsdl:part name="certPw" type="xsd:string" />
+    <wsdl:part name="dtiXml" type="xsd:string" />
+    <wsdl:part name="sendMailYn" type="xsd:string" />
+    <wsdl:part name="sendSmsYn" type="xsd:string" />
+    <wsdl:part name="sendSmsMsg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="makeAndPublishRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+    <wsdl:part name="billNo" type="xsd:string" />
+    <wsdl:part name="status" type="xsd:string" />
+    <wsdl:part name="dnVal" type="xsd:string" />
+    <wsdl:part name="DTIXml" type="xsd:string" />
+    <wsdl:part name="etcXml" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="recvConfirmBillRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+    <wsdl:part name="billNo" type="xsd:string" />
+    <wsdl:part name="status" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="changedStatusReqRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+    <wsdl:part name="startYYYYMMDD" type="xsd:string" />
+    <wsdl:part name="endYYYYMMDD" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="updateRequestBillRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="makeDTIWithFileResponse">
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+    <wsdl:part name="digest" type="xsd:string" />
+    <wsdl:part name="point" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="retryPeriodStatusNewResponse">
+    <wsdl:part name="retryPeriodStatusNewReturn" type="xsd:string" />
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="updateConfirmBatchRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+    <wsdl:part name="resultXml" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="makeAndPublishWithFileResponse">
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="retryPeriodStatusRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+    <wsdl:part name="startYYYYMMDD" type="xsd:string" />
+    <wsdl:part name="endYYYYMMDD" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="updateRequestBatchResponse">
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+    <wsdl:part name="resultXml" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="recvConfirmBillResponse">
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="publishDTIResponse">
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="membJoinResponse">
+    <wsdl:part name="membJoinReturn" type="xsd:string" />
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="retryPeriodStatusResponse">
+    <wsdl:part name="retryPeriodStatusReturn" type="xsd:string" />
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="changedStatusResResponse">
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="updateMembInfoResponse">
+    <wsdl:part name="updateMembInfoReturn" type="xsd:string" />
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="makeAndPublishSignResponse">
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+    <wsdl:part name="billNo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="updateConfirmBatchResponse">
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="selectTxtnClsRequest">
+    <wsdl:part name="bizNo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="selectMembInfoResponse">
+    <wsdl:part name="selectMembInfoReturn" type="xsd:string" />
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+    <wsdl:part name="bizNo" type="xsd:string" />
+    <wsdl:part name="custName" type="xsd:string" />
+    <wsdl:part name="ownerName" type="xsd:string" />
+    <wsdl:part name="bizCond" type="xsd:string" />
+    <wsdl:part name="bizItem" type="xsd:string" />
+    <wsdl:part name="rsbmName" type="xsd:string" />
+    <wsdl:part name="email" type="xsd:string" />
+    <wsdl:part name="telNo" type="xsd:string" />
+    <wsdl:part name="hpNo" type="xsd:string" />
+    <wsdl:part name="zipCode" type="xsd:string" />
+    <wsdl:part name="addr1" type="xsd:string" />
+    <wsdl:part name="addr2" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="retryPeriodStatusNewRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userId" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+    <wsdl:part name="startYYYYMMDD" type="xsd:string" />
+    <wsdl:part name="endYYYYMMDD" type="xsd:string" />
+    <wsdl:part name="columnSize" type="xsd:string" />
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="sendMultiMailResponse">
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="recvRequestBillRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="selectExpireDtRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="updateRequestBillResponse">
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+    <wsdl:part name="isChanged" type="xsd:string" />
+    <wsdl:part name="billNo" type="xsd:string" />
+    <wsdl:part name="changeCd" type="xsd:string" />
+    <wsdl:part name="status" type="xsd:string" />
+    <wsdl:part name="changeYmd" type="xsd:string" />
+    <wsdl:part name="statusDesc" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="updateMembInfoRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+    <wsdl:part name="custName" type="xsd:string" />
+    <wsdl:part name="ownerName" type="xsd:string" />
+    <wsdl:part name="bizCond" type="xsd:string" />
+    <wsdl:part name="bizItem" type="xsd:string" />
+    <wsdl:part name="rsbmName" type="xsd:string" />
+    <wsdl:part name="email" type="xsd:string" />
+    <wsdl:part name="telNo" type="xsd:string" />
+    <wsdl:part name="hpNo" type="xsd:string" />
+    <wsdl:part name="zipCode" type="xsd:string" />
+    <wsdl:part name="addr1" type="xsd:string" />
+    <wsdl:part name="addr2" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="makeAndPublishWithFileRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+    <wsdl:part name="billNo" type="xsd:string" />
+    <wsdl:part name="status" type="xsd:string" />
+    <wsdl:part name="dnVal" type="xsd:string" />
+    <wsdl:part name="DTIXml" type="xsd:string" />
+    <wsdl:part name="etcXml" type="xsd:string" />
+    <wsdl:part name="fileName" type="xsd:string" />
+    <wsdl:part name="fileData" type="xsd:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="updateRequestRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="selectBillStatusRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+    <wsdl:part name="billNo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="updateRequestResponse">
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+    <wsdl:part name="isChanged" type="xsd:string" />
+    <wsdl:part name="billNo" type="xsd:string" />
+    <wsdl:part name="changeCd" type="xsd:string" />
+    <wsdl:part name="status" type="xsd:string" />
+    <wsdl:part name="changeYmd" type="xsd:string" />
+    <wsdl:part name="statusDesc" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="selectBillStatusResponse">
+    <wsdl:part name="selectBillStatusReturn" type="xsd:string" />
+    <wsdl:part name="status" type="xsd:string" />
+    <wsdl:part name="ntsStatus" type="xsd:string" />
+    <wsdl:part name="ntsCode" type="xsd:string" />
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="makeDTIResponse">
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+    <wsdl:part name="digest" type="xsd:string" />
+    <wsdl:part name="point" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="updateRequestBatchRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+    <wsdl:part name="issue_list" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="recvRequestBillResponse">
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+    <wsdl:part name="recvYn" type="xsd:string" />
+    <wsdl:part name="billNo" type="xsd:string" />
+    <wsdl:part name="status" type="xsd:string" />
+    <wsdl:part name="DTIXml" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="selectExpireDtResponse">
+    <wsdl:part name="selectExpireDtReturn" type="xsd:string" />
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+    <wsdl:part name="regYn" type="xsd:string" />
+    <wsdl:part name="expireDt" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="retryPeriodStatusNewBillRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userId" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+    <wsdl:part name="startYYYYMMDD" type="xsd:string" />
+    <wsdl:part name="endYYYYMMDD" type="xsd:string" />
+    <wsdl:part name="columnSize" type="xsd:string" />
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="updateCertRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+    <wsdl:part name="certNo" type="xsd:string" />
+    <wsdl:part name="rVal" type="xsd:string" />
+    <wsdl:part name="dnVal" type="xsd:string" />
+    <wsdl:part name="expireYmd" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="publishDTIRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+    <wsdl:part name="billNo" type="xsd:string" />
+    <wsdl:part name="status" type="xsd:string" />
+    <wsdl:part name="dnVal" type="xsd:string" />
+    <wsdl:part name="digest" type="xsd:string" />
+    <wsdl:part name="signVal" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="updateConfirmResponse">
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="changeStatusRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+    <wsdl:part name="billNo" type="xsd:string" />
+    <wsdl:part name="status" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="selectMembInfoRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="sendMultiMailRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+    <wsdl:part name="billNos" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="recvConfirmRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+    <wsdl:part name="billNo" type="xsd:string" />
+    <wsdl:part name="status" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="changedStatusReqResponse">
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+    <wsdl:part name="statusMsg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="recvRequestRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="updateConfirmRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+    <wsdl:part name="billNo" type="xsd:string" />
+    <wsdl:part name="changeCd" type="xsd:string" />
+    <wsdl:part name="status" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="updateConfirmBillRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+    <wsdl:part name="billNo" type="xsd:string" />
+    <wsdl:part name="changeCd" type="xsd:string" />
+    <wsdl:part name="status" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="makePublishSAPRequest">
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+    <wsdl:part name="billNo" type="xsd:string" />
+    <wsdl:part name="dnVal" type="xsd:string" />
+    <wsdl:part name="DTIXml" type="xsd:string" />
+    <wsdl:part name="fileName" type="xsd:string" />
+    <wsdl:part name="fileData" type="xsd:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="makePublishSAPResponse">
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="sendMultiMail2Response">
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="updateCertResponse">
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="recvRequestResponse">
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+    <wsdl:part name="recvYn" type="xsd:string" />
+    <wsdl:part name="billNo" type="xsd:string" />
+    <wsdl:part name="status" type="xsd:string" />
+    <wsdl:part name="DTIXml" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="makeDTIRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+    <wsdl:part name="billNo" type="xsd:string" />
+    <wsdl:part name="status" type="xsd:string" />
+    <wsdl:part name="srchOption" type="xsd:string" />
+    <wsdl:part name="DTIXml" type="xsd:string" />
+    <wsdl:part name="etcXml" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="sendMultiMail2Request">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+    <wsdl:part name="billNos" type="xsd:string" />
+    <wsdl:part name="emails" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="selectTxtnClsResponse">
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+    <wsdl:part name="taxType" type="xsd:string" />
+    <wsdl:part name="closeYmd" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="changeStatusResponse">
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="changedStatusResRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+    <wsdl:part name="statusMsg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="makeDTIWithFileRequest">
+    <wsdl:part name="linkCd" type="xsd:string" />
+    <wsdl:part name="frnNo" type="xsd:string" />
+    <wsdl:part name="userid" type="xsd:string" />
+    <wsdl:part name="passwd" type="xsd:string" />
+    <wsdl:part name="billNo" type="xsd:string" />
+    <wsdl:part name="status" type="xsd:string" />
+    <wsdl:part name="srchOption" type="xsd:string" />
+    <wsdl:part name="DTIXml" type="xsd:string" />
+    <wsdl:part name="etcXml" type="xsd:string" />
+    <wsdl:part name="fileName" type="xsd:string" />
+    <wsdl:part name="fileData" type="xsd:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="makeAndPublishResponse">
+    <wsdl:part name="retVal" type="xsd:string" />
+    <wsdl:part name="errMsg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="DTIService">
+    <wsdl:operation name="selectTxtnCls" parameterOrder="bizNo retVal errMsg taxType closeYmd">
+      <wsdl:input name="selectTxtnClsRequest" message="impl:selectTxtnClsRequest" />
+      <wsdl:output name="selectTxtnClsResponse" message="impl:selectTxtnClsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="changedStatusReq" parameterOrder="linkCd frnNo userid passwd startYYYYMMDD endYYYYMMDD retVal errMsg statusMsg">
+      <wsdl:input name="changedStatusReqRequest" message="impl:changedStatusReqRequest" />
+      <wsdl:output name="changedStatusReqResponse" message="impl:changedStatusReqResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="changedStatusRes" parameterOrder="linkCd frnNo userid passwd statusMsg retVal errMsg">
+      <wsdl:input name="changedStatusResRequest" message="impl:changedStatusResRequest" />
+      <wsdl:output name="changedStatusResResponse" message="impl:changedStatusResResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="membJoin" parameterOrder="linkCd linkId bizNo custName ownerName bizCond bizItem rsbmName email telNo hpNo zipCode addr1 addr2 retVal errMsg frnNo userid passwd">
+      <wsdl:input name="membJoinRequest" message="impl:membJoinRequest" />
+      <wsdl:output name="membJoinResponse" message="impl:membJoinResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateMembInfo" parameterOrder="linkCd frnNo userid passwd custName ownerName bizCond bizItem rsbmName email telNo hpNo zipCode addr1 addr2 retVal errMsg">
+      <wsdl:input name="updateMembInfoRequest" message="impl:updateMembInfoRequest" />
+      <wsdl:output name="updateMembInfoResponse" message="impl:updateMembInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="selectMembInfo" parameterOrder="linkCd frnNo userid passwd retVal errMsg bizNo custName ownerName bizCond bizItem rsbmName email telNo hpNo zipCode addr1 addr2">
+      <wsdl:input name="selectMembInfoRequest" message="impl:selectMembInfoRequest" />
+      <wsdl:output name="selectMembInfoResponse" message="impl:selectMembInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="makeAndPublishSign" parameterOrder="linkCd frnNo userid passwd certPw dtiXml sendMailYn sendSmsYn sendSmsMsg retVal errMsg billNo">
+      <wsdl:input name="makeAndPublishSignRequest" message="impl:makeAndPublishSignRequest" />
+      <wsdl:output name="makeAndPublishSignResponse" message="impl:makeAndPublishSignResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateCert" parameterOrder="linkCd frnNo userid passwd certNo rVal dnVal expireYmd retVal errMsg">
+      <wsdl:input name="updateCertRequest" message="impl:updateCertRequest" />
+      <wsdl:output name="updateCertResponse" message="impl:updateCertResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="makeDTI" parameterOrder="linkCd frnNo userid passwd billNo status srchOption DTIXml etcXml retVal errMsg digest point">
+      <wsdl:input name="makeDTIRequest" message="impl:makeDTIRequest" />
+      <wsdl:output name="makeDTIResponse" message="impl:makeDTIResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="makeDTIWithFile" parameterOrder="linkCd frnNo userid passwd billNo status srchOption DTIXml etcXml fileName fileData retVal errMsg digest point">
+      <wsdl:input name="makeDTIWithFileRequest" message="impl:makeDTIWithFileRequest" />
+      <wsdl:output name="makeDTIWithFileResponse" message="impl:makeDTIWithFileResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="publishDTI" parameterOrder="linkCd frnNo userid passwd billNo status dnVal digest signVal retVal errMsg">
+      <wsdl:input name="publishDTIRequest" message="impl:publishDTIRequest" />
+      <wsdl:output name="publishDTIResponse" message="impl:publishDTIResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="makeAndPublish" parameterOrder="linkCd frnNo userid passwd billNo status dnVal DTIXml etcXml retVal errMsg">
+      <wsdl:input name="makeAndPublishRequest" message="impl:makeAndPublishRequest" />
+      <wsdl:output name="makeAndPublishResponse" message="impl:makeAndPublishResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="makeAndPublishWithFile" parameterOrder="linkCd frnNo userid passwd billNo status dnVal DTIXml etcXml fileName fileData retVal errMsg">
+      <wsdl:input name="makeAndPublishWithFileRequest" message="impl:makeAndPublishWithFileRequest" />
+      <wsdl:output name="makeAndPublishWithFileResponse" message="impl:makeAndPublishWithFileResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="makePublishSAP" parameterOrder="frnNo userid passwd billNo dnVal DTIXml fileName fileData retVal errMsg">
+      <wsdl:input name="makePublishSAPRequest" message="impl:makePublishSAPRequest" />
+      <wsdl:output name="makePublishSAPResponse" message="impl:makePublishSAPResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="retryPeriodStatus" parameterOrder="linkCd frnNo userid passwd startYYYYMMDD endYYYYMMDD retVal errMsg">
+      <wsdl:input name="retryPeriodStatusRequest" message="impl:retryPeriodStatusRequest" />
+      <wsdl:output name="retryPeriodStatusResponse" message="impl:retryPeriodStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="recvRequest" parameterOrder="linkCd frnNo userid passwd retVal errMsg recvYn billNo status DTIXml">
+      <wsdl:input name="recvRequestRequest" message="impl:recvRequestRequest" />
+      <wsdl:output name="recvRequestResponse" message="impl:recvRequestResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="recvRequestBill" parameterOrder="linkCd frnNo userid passwd retVal errMsg recvYn billNo status DTIXml">
+      <wsdl:input name="recvRequestBillRequest" message="impl:recvRequestBillRequest" />
+      <wsdl:output name="recvRequestBillResponse" message="impl:recvRequestBillResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="recvConfirm" parameterOrder="linkCd frnNo userid passwd billNo status retVal errMsg">
+      <wsdl:input name="recvConfirmRequest" message="impl:recvConfirmRequest" />
+      <wsdl:output name="recvConfirmResponse" message="impl:recvConfirmResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="recvConfirmBill" parameterOrder="linkCd frnNo userid passwd billNo status retVal errMsg">
+      <wsdl:input name="recvConfirmBillRequest" message="impl:recvConfirmBillRequest" />
+      <wsdl:output name="recvConfirmBillResponse" message="impl:recvConfirmBillResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="changeStatus" parameterOrder="linkCd frnNo userid passwd billNo status retVal errMsg">
+      <wsdl:input name="changeStatusRequest" message="impl:changeStatusRequest" />
+      <wsdl:output name="changeStatusResponse" message="impl:changeStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateRequest" parameterOrder="linkCd frnNo userid passwd retVal errMsg isChanged billNo changeCd status changeYmd statusDesc">
+      <wsdl:input name="updateRequestRequest" message="impl:updateRequestRequest" />
+      <wsdl:output name="updateRequestResponse" message="impl:updateRequestResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateRequestBill" parameterOrder="linkCd frnNo userid passwd retVal errMsg isChanged billNo changeCd status changeYmd statusDesc">
+      <wsdl:input name="updateRequestBillRequest" message="impl:updateRequestBillRequest" />
+      <wsdl:output name="updateRequestBillResponse" message="impl:updateRequestBillResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateRequestBatch" parameterOrder="linkCd frnNo userid passwd issue_list retVal errMsg resultXml">
+      <wsdl:input name="updateRequestBatchRequest" message="impl:updateRequestBatchRequest" />
+      <wsdl:output name="updateRequestBatchResponse" message="impl:updateRequestBatchResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateConfirm" parameterOrder="linkCd frnNo userid passwd billNo changeCd status retVal errMsg">
+      <wsdl:input name="updateConfirmRequest" message="impl:updateConfirmRequest" />
+      <wsdl:output name="updateConfirmResponse" message="impl:updateConfirmResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateConfirmBill" parameterOrder="linkCd frnNo userid passwd billNo changeCd status retVal errMsg">
+      <wsdl:input name="updateConfirmBillRequest" message="impl:updateConfirmBillRequest" />
+      <wsdl:output name="updateConfirmBillResponse" message="impl:updateConfirmBillResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateConfirmBatch" parameterOrder="linkCd frnNo userid passwd resultXml retVal errMsg">
+      <wsdl:input name="updateConfirmBatchRequest" message="impl:updateConfirmBatchRequest" />
+      <wsdl:output name="updateConfirmBatchResponse" message="impl:updateConfirmBatchResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sendMultiMail" parameterOrder="linkCd frnNo userid passwd billNos retVal errMsg">
+      <wsdl:input name="sendMultiMailRequest" message="impl:sendMultiMailRequest" />
+      <wsdl:output name="sendMultiMailResponse" message="impl:sendMultiMailResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sendMultiMail2" parameterOrder="linkCd frnNo userid passwd billNos emails retVal errMsg">
+      <wsdl:input name="sendMultiMail2Request" message="impl:sendMultiMail2Request" />
+      <wsdl:output name="sendMultiMail2Response" message="impl:sendMultiMail2Response" />
+    </wsdl:operation>
+    <wsdl:operation name="selectBillStatus" parameterOrder="linkCd frnNo userid passwd billNo status ntsStatus ntsCode retVal errMsg">
+      <wsdl:input name="selectBillStatusRequest" message="impl:selectBillStatusRequest" />
+      <wsdl:output name="selectBillStatusResponse" message="impl:selectBillStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="selectExpireDt" parameterOrder="linkCd frnNo userid passwd retVal errMsg regYn expireDt">
+      <wsdl:input name="selectExpireDtRequest" message="impl:selectExpireDtRequest" />
+      <wsdl:output name="selectExpireDtResponse" message="impl:selectExpireDtResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="retryPeriodStatusNew" parameterOrder="linkCd frnNo userId passwd startYYYYMMDD endYYYYMMDD columnSize retVal errMsg">
+      <wsdl:input name="retryPeriodStatusNewRequest" message="impl:retryPeriodStatusNewRequest" />
+      <wsdl:output name="retryPeriodStatusNewResponse" message="impl:retryPeriodStatusNewResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="retryPeriodStatusNewBill" parameterOrder="linkCd frnNo userId passwd startYYYYMMDD endYYYYMMDD columnSize retVal errMsg">
+      <wsdl:input name="retryPeriodStatusNewBillRequest" message="impl:retryPeriodStatusNewBillRequest" />
+      <wsdl:output name="retryPeriodStatusNewBillResponse" message="impl:retryPeriodStatusNewBillResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DTIServiceSoapBinding" type="impl:DTIService">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="selectTxtnCls">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="selectTxtnClsRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="selectTxtnClsResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changedStatusReq">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="changedStatusReqRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="changedStatusReqResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changedStatusRes">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="changedStatusResRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="changedStatusResResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="membJoin">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="membJoinRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="membJoinResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateMembInfo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="updateMembInfoRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="updateMembInfoResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectMembInfo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="selectMembInfoRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="selectMembInfoResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="makeAndPublishSign">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="makeAndPublishSignRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="makeAndPublishSignResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCert">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="updateCertRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="updateCertResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="makeDTI">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="makeDTIRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="makeDTIResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="makeDTIWithFile">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="makeDTIWithFileRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="makeDTIWithFileResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="publishDTI">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="publishDTIRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="publishDTIResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="makeAndPublish">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="makeAndPublishRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="makeAndPublishResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="makeAndPublishWithFile">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="makeAndPublishWithFileRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="makeAndPublishWithFileResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="makePublishSAP">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="makePublishSAPRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="makePublishSAPResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retryPeriodStatus">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="retryPeriodStatusRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="retryPeriodStatusResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="recvRequest">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="recvRequestRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="recvRequestResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="recvRequestBill">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="recvRequestBillRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="recvRequestBillResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="recvConfirm">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="recvConfirmRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="recvConfirmResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="recvConfirmBill">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="recvConfirmBillRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="recvConfirmBillResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changeStatus">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="changeStatusRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="changeStatusResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateRequest">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="updateRequestRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="updateRequestResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateRequestBill">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="updateRequestBillRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="updateRequestBillResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateRequestBatch">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="updateRequestBatchRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="updateRequestBatchResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateConfirm">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="updateConfirmRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="updateConfirmResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateConfirmBill">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="updateConfirmBillRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="updateConfirmBillResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateConfirmBatch">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="updateConfirmBatchRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="updateConfirmBatchResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendMultiMail">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sendMultiMailRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="sendMultiMailResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendMultiMail2">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sendMultiMail2Request">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="sendMultiMail2Response">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectBillStatus">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="selectBillStatusRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="selectBillStatusResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectExpireDt">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="selectExpireDtRequest">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="selectExpireDtResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retryPeriodStatusNew">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="retryPeriodStatusNewRequest">
+        <wsdlsoap:body use="encoded" namespace="http://legacy.dti.ws.nds" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="retryPeriodStatusNewResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retryPeriodStatusNewBill">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="retryPeriodStatusNewBillRequest">
+        <wsdlsoap:body use="encoded" namespace="http://legacy.dti.ws.nds" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="retryPeriodStatusNewBillResponse">
+        <wsdlsoap:body use="encoded" namespace="https://t-ws.nicedata.co.kr/services/DTIService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DTIServiceService">
+    <wsdl:port name="DTIService" binding="impl:DTIServiceSoapBinding">
+      <wsdlsoap:address location="https://t-ws.nicedata.co.kr/services/DTIService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

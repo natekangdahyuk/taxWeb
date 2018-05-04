@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="a11" xml:space="preserve">
+    <value>존재하지 않는 아이디입니다.</value>
+  </data>
+  <data name="a12" xml:space="preserve">
+    <value>고객사코드가 잘못되었습니다.</value>
+  </data>
+  <data name="a13" xml:space="preserve">
+    <value>비밀번호가 잘못되었습니다.</value>
+  </data>
+  <data name="a14" xml:space="preserve">
+    <value>연계코드가 잘못되었습니다.</value>
+  </data>
+  <data name="a21" xml:space="preserve">
+    <value>XML 데이터가 올바르지 않습니다.</value>
+  </data>
+  <data name="a22" xml:space="preserve">
+    <value>부가정보 데이터가 올바르지 않습니다.</value>
+  </data>
+  <data name="a23" xml:space="preserve">
+    <value>등록된 계산서가 없습니다.</value>
+  </data>
+  <data name="a28" xml:space="preserve">
+    <value>타 사업자 계산서 자료를 등록할 수 없습니다.</value>
+  </data>
+  <data name="a29" xml:space="preserve">
+    <value>위수탁 발행시 위수탁 사업자번호는 필수항목입니다.</value>
+  </data>
+  <data name="a30" xml:space="preserve">
+    <value>위수탁 발행시 위수탁 사업자번호가 공급자 또는 공급받는자 사업자번호와 동일할 수 없습니다.</value>
+  </data>
+  <data name="a31" xml:space="preserve">
+    <value>일반 발행시 위수탁 사업자번호가 존재하면 안됩니다.</value>
+  </data>
+  <data name="a32" xml:space="preserve">
+    <value>지원하지 않은 상태로 변경하려 합니다.</value>
+  </data>
+  <data name="a33" xml:space="preserve">
+    <value>상태를 변경할 수 있는 권한이 없습니다.</value>
+  </data>
+  <data name="a34" xml:space="preserve">
+    <value>요청 상태가 적절하지 않습니다.</value>
+  </data>
+  <data name="a35" xml:space="preserve">
+    <value>요청한 승인번호의 개수와 이메일주소의 개수가 일치하지 않습니다.</value>
+  </data>
+  <data name="a42" xml:space="preserve">
+    <value>등록된 공인인증서가 없습니다.</value>
+  </data>
+  <data name="a43" xml:space="preserve">
+    <value>등록된 공인인증서의 유효기간이 만료되었습니다.</value>
+  </data>
+  <data name="a50" xml:space="preserve">
+    <value>연계코드에 값이 없습니다.</value>
+  </data>
+  <data name="a51" xml:space="preserve">
+    <value>회원가입/수정 권한이 없는 연계사입니다.</value>
+  </data>
+  <data name="a52" xml:space="preserve">
+    <value>값이 존재하지 않는 파라미터가 있습니다.</value>
+  </data>
+  <data name="a53" xml:space="preserve">
+    <value>이미 가입된 회원입니다. ID : 회원ID</value>
+  </data>
+  <data name="a54" xml:space="preserve">
+    <value>등록된 회원정보가 없습니다.</value>
+  </data>
+  <data name="a55" xml:space="preserve">
+    <value>비밀번호가 맞지 않습니다.</value>
+  </data>
+  <data name="a56" xml:space="preserve">
+    <value>날짜의 형식은 YYYYMMDD 입니다.</value>
+  </data>
+  <data name="a57" xml:space="preserve">
+    <value>최대 검색기간을 초과하였습니다.</value>
+  </data>
+  <data name="a58" xml:space="preserve">
+    <value>포인트가 부족합니다.</value>
+  </data>
+  <data name="a59" xml:space="preserve">
+    <value>포인트 정보가 없습니다.</value>
+  </data>
+  <data name="a60" xml:space="preserve">
+    <value>전자서명시 에러가 발생하였습니다.</value>
+  </data>
+  <data name="a90" xml:space="preserve">
+    <value>조회된 데이터가 없습니다.</value>
+  </data>
+  <data name="a91" xml:space="preserve">
+    <value>처리 중 오류가 발생했습니다</value>
+  </data>
+  <data name="a99" xml:space="preserve">
+    <value>알 수 없는 오류가 발생했습니다</value>
+  </data>
+</root>

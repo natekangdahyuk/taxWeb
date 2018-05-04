@@ -1,0 +1,77 @@
+﻿@model Models.RegistForm_Client
+
+@{    
+    Layout = "~/Views/Shared/_NoLayout.cshtml";
+}
+<form name="frm">
+
+    <input type="hidden" id="SESSION_ID" name="SESSION_ID" value="@Model.SESSION_ID" />
+    <input type="hidden" id="LINKID" name="LINKID" value="@Model.LINKID" />
+    <input type="hidden" id="ZIPCODE" name="ZIPCODE" value="@Model.ZIPCODE" />
+    <input type="hidden" id="ADDR1" name="ADDR1" value="@Model.ADDR1" />
+    <input type="hidden" id="ADDR2" name="ADDR2" value="@Model.ADDR2" />
+
+    <div id="contents" class="contents">
+        <section class="section">
+            <div class="titleArea">
+                <h3>공인인증서 등록을 위한 회원가입</h3>
+            </div>
+            <div class="tableLayout">
+                <table>
+                    <caption>caption</caption>
+                    <colgroup>
+                        <col style="width:180px">
+                        <col style="width:auto">
+                        <col style="width:180px">
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">회사명 </th>
+                            <td colspan="3"><input type="text" class="fText w200" readonly="readonly" id="CUSTNAME" value="@Model.CUSTNAME" /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">대표자명 </th>
+                            <td colspan="3"><input type="text" class="fText w200" readonly="readonly" id="OWNERNAME" value="@Model.OWNERNAME" /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">사업자번호</th>
+                            <td colspan="3"><input type="text" class="fText w200" readonly="readonly" id="BIZNO" value="@Model.BIZNO" /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">업태 </th>
+                            <td colspan="3"><input type="text" class="fText w200" id="BIZCOND" value="@Model.BIZCOND" /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">종목 </th>
+                            <td colspan="3"><input type="text" class="fText w200" id="BIZITEM" value="@Model.BIZITEM" /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">담당자명 </th>
+                            <td colspan="3"><input type="text" class="fText w200" id="RSBMNAME" value="@Model.RSBMNAME" /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">이메일 </th>
+                            <td colspan="3"><input type="text" class="fText w200" id="EMAIL" value="@Model.EMAIL" /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">전화번호 </th>
+                            <td colspan="3"><input type="text" class="fText w200" id="TELNO" value="@Model.TELNO" onchange="getOnlyNumber(this);" onkeyup="getOnlyNumber(this);" /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">휴대폰번호 </th>
+                            <td colspan="3"><input type="text" class="fText w200" id="HPNO" value="@Model.HPNO" onchange="getOnlyNumber(this);" onkeyup="getOnlyNumber(this);" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="btnArea">
+                <a href="#" class="btnSubmit" id="btn_Submit">정보 등록</a>
+            </div>
+        </section>
+
+    </div>
+</form>
+
+    <script src="~/Views/DriverManager/Nice_Regist.js?version=0.1"></script>
