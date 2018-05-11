@@ -2,21 +2,26 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover">
     <title>세금계산서-COD</title>
     <link rel="shortcut icon" type="image/x-icon" href="~/Assets/images/favicon_32.ico">
-    <link href="//fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet" type="text/css">
     <link href="~/Assets/css/reset.css" rel="stylesheet" type="text/css">
     <link href="~/Assets/css/common.css" rel="stylesheet" type="text/css">
 
     <script type="text/javascript" src="~/Assets/js/jquery-1.11.3.min.js"></script>
     <script src="~/Assets/js/common.js"></script>
-
-    <script src="~/Assets/js/jsDagul/js.cookie.js"></script>
-    <script src="~/Assets/js/jsDagul/common.js?version=1.0.14"></script>
-    <script src="~/Assets/js/jsDagul/encoding.js"></script>
 </head>
 <body>
-        @RenderBody()
+<div class="wrap mo" id="wrap">
+    <header class="header">
+        <h1>COD Truck</h1>
+    </header>
+    
+    @RenderBody()
+    
+    <footer class="footer">
+        <p class="copyright">Copyright &#169; 2017.(주)씨오디랩스 all rights reserved</p>
+    </footer>
+</div>
 </body>
 </html>

@@ -9,6 +9,12 @@
         location.href = "/DriverManager/Error";	//에러페이지
     } 
 
+    //입력 시 에러 메세지 삭제
+    /*$().on(change, function() {
+
+        //$("#err_area").text().hide();
+    });*/
+
     //로그인 버튼 클릭
     $("#btnLogin").click(function () {        
         LoginChk();
@@ -38,13 +44,20 @@ function LoginChk() {
     var phone_no = $("#phone_no").val();
     var birth_day = $("#birth_day").val();
 
+    $("#phone_no").removeClass("error");
+    $("#birth_day").removeClass("error");
+
     if (phone_no.length < 10) {
-        alert("차주 앱 사용 전화번호를 입력해 주세요.");
+        //alert("차주 앱 사용 전화번호를 입력해 주세요.");
+        $("#err_area").css("display", "block").text("차주 앱 사용 전화번호를 입력해 주세요.");
+        $("#phone_no").addClass("error");
         return false;
     }
 
     if (birth_day.length < 6) {
-        alert("생일을 입력해 주세요.");
+        //alert("생일을 입력해 주세요.");
+        $("#err_area").css("display", "block").text("생년월일을 입력해 주세요.");
+        $("#birth_day").addClass("error");
         return false;
     }
 
@@ -134,15 +147,17 @@ function fn_Login_Success(data) {
         return false;
     }
     else if (json.Status_Code === "501") {
-        errMsg = "찾을 수 없는 핸드폰 번호입니다";
+        errMsg = "찾을 수 없는 핸드폰 번호입니다.";
         $("#err_area").css("display", "block");
         $("#err_area").text(errMsg);
+        $("#phone_no").addClass("error");
         return false;
     }
     else if (json.Status_Code === "502") {
-        errMsg = "패스워드(생년월일)가 일치하지 않습니다";
+        errMsg = "패스워드(생년월일)가 일치하지 않습니다.";
         $("#err_area").css("display", "block");
         $("#err_area").text(errMsg);
+        $("#birth_day").addClass("error");
         return false;
     }
     else if (json.Status_Code === "505") {
