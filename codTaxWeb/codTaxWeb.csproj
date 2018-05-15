@@ -288,6 +288,7 @@
     <Content Include="Views\DriverManager\Nice_Regist.js" />
     <Content Include="WebService\wsMember.asmx" />
     <Content Include="WebService\wsNice.asmx" />
+    <None Include="Properties\PublishProfiles\taxWeb.pubxml" />
     <None Include="Properties\PublishProfiles\세금계산서.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -319,7 +320,6 @@
     <Content Include="Views\DriverManager\Check_Login.cshtml" />
     <Content Include="Views\Shared\_NoLayout.cshtml" />
     <Content Include="Views\DriverManager\Nice_Regist.cshtml" />
-    <Content Include="Views\DriverManager\certification_finish.cshtml" />
     <Content Include="Views\DriverManager\expireDt_success.cshtml" />
     <Content Include="Views\DriverManager\Error.cshtml" />
     <None Include="Web References\NiceSoapService\DTIService.wsdl" />

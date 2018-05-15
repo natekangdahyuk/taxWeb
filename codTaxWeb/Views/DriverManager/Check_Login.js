@@ -14,16 +14,48 @@
 
         //$("#err_area").text().hide();
     });*/
+   /* $("#phone_no").focus(function () {
+        console.log("a");
+        $("#phone_no").removeClass("error");
+        $("#birth_day").removeClass("error");
+        //$("#err_area").text().css("display", "none");
+    });
+    $("#birth_day").focus(function () {
+        console.log("b");
+        $("#phone_no").removeClass("error");
+        $("#birth_day").removeClass("error");
+        //$("#err_area").text().css("display", "none");
+    });*/
 
     //로그인 버튼 클릭
-    $("#btnLogin").click(function () {        
+    $("#btnLogin").click(function () {
         LoginChk();
     });
 
     // 비밀번호입력에서 엔터키 누를 시 로그인버튼 클릭이벤트
     $("#birth_day").keyup(function (e) {
+        var keyCount = 0;
+        keyCount++;
+
         if (e.keyCode === 13) {
             LoginChk();
+        } else {
+            if(keyCount === 1) {
+                $("#phone_no").removeClass("error");
+                $("#birth_day").removeClass("error");
+                $("#err_area").css("display", "none").text();
+            }
+        }
+    });
+
+    $("#phone_no").keyup(function (e) {
+        var keyCount = 0;
+        keyCount++;
+
+        if(keyCount === 1) {
+            $("#phone_no").removeClass("error");
+            $("#birth_day").removeClass("error");
+            $("#err_area").css("display", "none").text();
         }
     });
 });
@@ -142,40 +174,34 @@ function fn_Login_Success(data) {
     }//아래는 로그인 실패
     else if (json.Status_Code === "500") {
         errMsg = "db ERROR";
-        $("#err_area").css("display", "block");
-        $("#err_area").text(errMsg);
+        $("#err_area").text(errMsg).css("display", "block");
         return false;
     }
     else if (json.Status_Code === "501") {
         errMsg = "찾을 수 없는 핸드폰 번호입니다.";
-        $("#err_area").css("display", "block");
-        $("#err_area").text(errMsg);
+        $("#err_area").text(errMsg).css("display", "block");
         $("#phone_no").addClass("error");
         return false;
     }
     else if (json.Status_Code === "502") {
         errMsg = "패스워드(생년월일)가 일치하지 않습니다.";
-        $("#err_area").css("display", "block");
-        $("#err_area").text(errMsg);
+        $("#err_area").text(errMsg).css("display", "block");
         $("#birth_day").addClass("error");
         return false;
     }
     else if (json.Status_Code === "505") {
         errMsg = "회원님은 사용할 수 없는 상태입니다."; //:::: USE_YN이라는 칼럼이 N(COD 관리자가 사용못하게 막는등) ";
-        $("#err_area").css("display", "block");
-        $("#err_area").text(errMsg);
+        $("#err_area").text(errMsg).css("display", "block");
         return false;
     }
     else if (json.Status_Code === "506") {
         errMsg = "회원님은 가입승인을 받으시기 바랍니다.(관리자에게 문의바랍니다.)";// ::: 그럴경우는 없겠지만 준회원이 이경로로 들어올경우
-        $("#err_area").css("display", "block");
-        $("#err_area").text(errMsg);
+        $("#err_area").text(errMsg).css("display", "block");
         return false;
     }
     else {
         errMsg = "정말 알수 없는 에러 : ";
-        $("#err_area").css("display", "block");
-        $("#err_area").text(errMsg);
+        $("#err_area").text(errMsg).css("display", "block");
         return false;
     }
 }
@@ -266,38 +292,32 @@ function fn_NiceRegistCheck_Success(data, loginOK_json) {
 
     else if (json.Status_Code === "500") {
         errMsg = "db ERROR";
-        $("#err_area").css("display", "block");
-        $("#err_area").text(errMsg);
+        $("#err_area").text(errMsg).css("display", "block");
         return false;
     }
     else if (json.Status_Code === "501") {
         errMsg = "찾을 수 없는 핸드폰 번호입니다";
-        $("#err_area").css("display", "block");
-        $("#err_area").text(errMsg);
+        $("#err_area").text(errMsg).css("display", "block");
         return false;
     }
     else if (json.Status_Code === "502") {
         errMsg = "패스워드(생년월일)가 일치하지 않습니다";
-        $("#err_area").css("display", "block");
-        $("#err_area").text(errMsg);
+        $("#err_area").text(errMsg).css("display", "block");
         return false;
     }
     else if (json.Status_Code === "505") {
         errMsg = "회원님은 사용할 수 없는 상태입니다."; //:::: USE_YN이라는 칼럼이 N(COD 관리자가 사용못하게 막는등) ";
-        $("#err_area").css("display", "block");
-        $("#err_area").text(errMsg);
+        $("#err_area").text(errMsg).css("display", "block");
         return false;
     }
     else if (json.Status_Code === "506") {
         errMsg = "회원님은 가입승인을 받으시기 바랍니다.(관리자에게 문의바랍니다.)";// ::: 그럴경우는 없겠지만 준회원이 이경로로 들어올경우
-        $("#err_area").css("display", "block");
-        $("#err_area").text(errMsg);
+        $("#err_area").text(errMsg).css("display", "block");
         return false;
     }
     else {
         errMsg = "정말 알수 없는 에러 : ";
-        $("#err_area").css("display", "block");
-        $("#err_area").text(errMsg);
+        $("#err_area").text(errMsg).css("display", "block");
         return false;
     }
 }
@@ -324,8 +344,7 @@ function fn_ExpireDt_Success(data) {
     }
     else {
         errMsg = "정말 알수 없는 에러 : ";
-        $("#err_area").css("display", "block");
-        $("#err_area").text(errMsg);
+        $("#err_area").text(errMsg).css("display", "block");
         return false;
     }
 }

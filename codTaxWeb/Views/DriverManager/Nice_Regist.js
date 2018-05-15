@@ -9,9 +9,9 @@
 function btn_Submit() {
     var SESSION_ID = $("#SESSION_ID").val();
     var LINKID = $("#LINKID").val();
-    var BIZNO = $("#BIZNO").val();
-    var CUSTNAME = $("#CUSTNAME").val();
-    var OWNERNAME = $("#OWNERNAME").val();
+    var BIZNO = $("#BIZNO").text();
+    var CUSTNAME = $("#CUSTNAME").text();
+    var OWNERNAME = $("#OWNERNAME").text();
     var BIZCOND = $("#BIZCOND").val();
     var BIZITEM = $("#BIZITEM").val();
     var RSBMNAME = $("#RSBMNAME").val();
@@ -85,7 +85,7 @@ function btn_Submit() {
         p_obj_NiceUserRegist.HPNO = HPNO,
         p_obj_NiceUserRegist.ZIPCODE = ZIPCODE,
         p_obj_NiceUserRegist.ADDR1 = ADDR1,
-        p_obj_NiceUserRegist.ADDR2 = ADDR2
+        p_obj_NiceUserRegist.ADDR2 = ADDR2;
 
     var DTO = { 'p_obj_NiceUserRegist': p_obj_NiceUserRegist };
     fn_nice_regist_AjAx(DTO);
